@@ -1,0 +1,6 @@
+{
+  "name": "slidev-addon-keynote",
+  "private": true,
+  "keywords": ["slidev-addon", "slidev"],
+  "description": "Keynote 風格的共用 layout、元件與樣式，所有 deck 透過 addons: [../../theme] 載入"
+}

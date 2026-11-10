@@ -1,0 +1,1 @@
+Source: https://github.com/kevintsai1202/humanizer-zh-tw @ e2cb617 (revision 2026-09-25)

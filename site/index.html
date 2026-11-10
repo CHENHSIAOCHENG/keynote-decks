@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Keynote Decks</title>
+  <meta name="description" content="Keynote 風格的 Slidev 簡報集，每份簡報都依同一套 AGENTS.md 規則製作。">
+  <style>
+    /* 色彩與字體沿用 theme/style.css 的 token，首頁不另外加顏色 */
+    :root {
+      --bg: #000000;
+      --fg: #f5f5f7;
+      --fg-muted: #a1a1a6;
+      --fg-faint: #6e6e73;
+      --surface: #161617;
+      --line: rgba(255, 255, 255, .14);
+      --glow: #2997ff;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(ellipse 100% 60% at 50% 110%, color-mix(in srgb, var(--glow) 28%, transparent), transparent 70%) fixed, var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 120px 0 72px; text-align: center; }
+    .eyebrow { font-size: 17px; font-weight: 600; color: var(--fg-faint); margin-bottom: 16px; }
+    h1 {
+      margin: 0;
+      font-size: clamp(48px, 9vw, 96px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      margin: 24px auto 0;
+      max-width: 32em;
+      font-size: clamp(17px, 2.2vw, 21px);
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--fg-muted);
+      text-wrap: balance;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      padding-bottom: 120px;
+    }
+    .card {
+      display: block;
+      padding: 16px 16px 28px;
+      border-radius: 28px;
+      background: var(--surface);
+      color: inherit;
+      text-decoration: none;
+      transition: transform .3s ease, background .3s ease;
+    }
+    .card:hover { transform: translateY(-4px); background: #1d1d1f; }
+    .thumb {
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+    }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .thumb span { font-size: 28px; font-weight: 700; padding: 24px; text-align: center; }
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 12px 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--fg-faint);
+    }
+    .card h2 { margin: 8px 12px 0; font-size: 28px; font-weight: 700; letter-spacing: -0.02em; }
+    .card p { margin: 8px 12px 0; font-size: 16px; line-height: 1.5; color: var(--fg-muted); }
+    footer {
+      padding: 32px 0 48px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--fg-faint);
+      text-align: center;
+    }
+    @media (max-width: 400px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Keynote Decks</div>
+      <h1>簡報集</h1>
+      <p class="lead">共 <!-- COUNT --> 份簡報<br>點卡片開啟 · ← → 換頁 · O 總覽</p>
+    </header>
+    <main class="grid"><!-- DECKS -->
+    </main>
+    <footer>Built with Slidev · 規則見 AGENTS.md</footer>
+  </div>
+</body>
+</html>
